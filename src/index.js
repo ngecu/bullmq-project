@@ -1,10 +1,10 @@
 const Koa = require("koa");
 const Router = require("@koa/router");
-
+const colors = require('colors');
 const app = new Koa();
 const router = new Router();
 const bodyParser = require('koa-bodyparser');
-
+const PORT = 3000;
 const { ticketsQueue, createNewTicket } = require("./queues/tickets-queue");
 const { createBullBoard } = require('@bull-board/api');
 
@@ -45,4 +45,4 @@ app.use(serverAdapter.registerPlugin());
 
 app.use(bodyParser()).use(router.routes()).use(router.allowedMethods());
 
-app.listen(3000, () => console.log("Server up and running!"));
+app.listen(PORT, () => console.log(`Server running on port ${PORT}`.yellow.bold));
