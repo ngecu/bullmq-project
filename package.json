@@ -1,0 +1,27 @@
+{
+  "name": "bullmq-project",
+  "version": "1.0.0",
+  "description": "A demonstration project to elaborate on handling asynchronous tasks with node js",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "bullmq",
+    "nodjs",
+    "async"
+  ],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@bull-board/express": "^5.6.0",
+    "@bull-board/koa": "^5.6.0",
+    "@koa/router": "^12.0.0",
+    "bull": "^4.10.4",
+    "koa": "^2.14.2",
+    "koa-bodyparser": "^4.4.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.22"
+  }
+}
